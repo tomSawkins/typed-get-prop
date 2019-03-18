@@ -1,5 +1,5 @@
 # typed-get-prop
-Strongly-typed function to get a nested & potentially null/undefined property value safely from an object
+Strongly-typed function to get a nested & potentially null/undefined property value safely from an object.
 
 [![npm version](https://badge.fury.io/js/typed-get-prop.svg)](https://badge.fury.io/js/typed-get-prop)
 [![Build Status](https://travis-ci.org/tomSawkins/typed-get-prop.svg?branch=master)](https://travis-ci.org/tomSawkins/typed-get-prop)
@@ -34,7 +34,7 @@ const movie: Movie = {
 };
 
 const year = getProp(movie, 'year'); // number | undefined
-const trinity = getProp(movie, 'cast', 1, 'characters', 0); // { name: string }
+const trinity = getProp(movie, 'cast', 1, 'characters', 0, 'name'); // string | undefined
 ```
 
 ## Why do I need this?
@@ -73,7 +73,7 @@ const movie: Movie = {
 const leadActor = getProp(movie, 'actors', 0);
 ```
 
-3. Also, unlike most (all?) other libraries on NPM, `typed-get-prop` will correctly infer types of properties.
+3. Also, unlike most (if not all?) other similar property getter libraries on NPM, `typed-get-prop` will correctly infer types of properties.
 
 ```typescript
 const movie: Movie = {
@@ -89,7 +89,7 @@ const movie: Movie = {
   ]
 };
 
-const year = getProp(movie, 'year'); // year is a number at design-time
+const year = getProp(movie, 'year'); // year is number | undefined at design-time
 ```
 
 ## Contributing
