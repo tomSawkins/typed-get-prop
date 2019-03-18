@@ -9,3 +9,6 @@ dist
 
 # Test Coverage
 coverage
+
+# Generated source
+src/index.ts

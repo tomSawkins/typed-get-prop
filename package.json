@@ -5,11 +5,11 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm run generate",
     "build": "tsc -p ./tsconfig.main.json",
     "postbuild": "npm run package",
     "check": "npm test && npm run lint",
-    "clean": "rimraf ./dist",
+    "clean": "rimraf ./dist ./src/index.ts",
     "commit": "commit",
     "generate": "ts-node --project ./tsconfig.support.json ./support/generate.ts 20",
     "lint": "tslint -p ./tsconfig.json",
