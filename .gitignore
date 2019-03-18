@@ -1,0 +1,14 @@
+# Node
+node_modules
+
+# VSCode
+.vscode
+
+# Build artefacts
+dist
+
+# Test Coverage
+coverage
+
+# Generated source
+src/index.ts
