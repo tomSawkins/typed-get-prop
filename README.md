@@ -40,57 +40,57 @@ const trinity = getProp(movie, 'cast', 1, 'characters', 0, 'name'); // string | 
 ## Why do I need this?
 1. Because getting a nested property value can be **error-prone** when parent properties can be `null` or `undefined`.
 
-```typescript
-const movie: Movie = {
-  title: 'Fight Club',
-  year: 1999
-};
+    ```typescript
+    const movie: Movie = {
+      title: 'Fight Club',
+      year: 1999
+    };
 
-// Next line will error because `cast` is optional and undefined
-const leadActor = movie.cast[0];
+    // Next line will error because `cast` is optional and undefined
+    const leadActor = movie.cast[0];
 
-// Using getProp will simply return undefined rather than erroring
-const leadActor = getProp(movie, 'cast', 0);
-```
+    // Using getProp will simply return undefined rather than erroring
+    const leadActor = getProp(movie, 'cast', 0);
+    ```
 
 2. Also `typed-get-prop` will complain at design/compile-time if you try to access a property of a typed object that doesn't exist in the model.
 
-```typescript
-const movie: Movie = {
-  title: 'The Matrix',
-  year: 1999
-  cast: [
-    {
-      name: 'Keanu Reeves',
-      characters: [{
-        name: 'Neo'
-      }]
-    }
-  ]
-};
+    ```typescript
+    const movie: Movie = {
+      title: 'The Matrix',
+      year: 1999
+      cast: [
+        {
+          name: 'Keanu Reeves',
+          characters: [{
+            name: 'Neo'
+          }]
+        }
+      ]
+    };
 
-// Next line will error at design/compile-time because `actors` isn't a property on the Movie type. It should be `cast`.
-const leadActor = getProp(movie, 'actors', 0);
-```
+    // Next line will error at design/compile-time because `actors` isn't a property on the Movie type. It should be `cast`.
+    const leadActor = getProp(movie, 'actors', 0);
+    ```
 
 3. Also, unlike most (if not all?) other similar property getter libraries on NPM, `typed-get-prop` will correctly infer types of properties.
 
-```typescript
-const movie: Movie = {
-  title: 'The Matrix',
-  year: 1999
-  cast: [
-    {
-      name: 'Keanu Reeves',
-      characters: [{
-        name: 'Neo'
-      }]
-    }
-  ]
-};
+    ```typescript
+    const movie: Movie = {
+      title: 'The Matrix',
+      year: 1999
+      cast: [
+        {
+          name: 'Keanu Reeves',
+          characters: [{
+            name: 'Neo'
+          }]
+        }
+      ]
+    };
 
-const year = getProp(movie, 'year'); // year is number | undefined at design-time
-```
+    const year = getProp(movie, 'year'); // year is number | undefined at design-time
+    ```
 
 ## Contributing
 Got an issue or a feature request? [Log it](https://github.com/tomSawkins/typed-get-prop/issues).
