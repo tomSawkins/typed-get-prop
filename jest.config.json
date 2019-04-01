@@ -1,0 +1,51 @@
+{
+  "clearMocks": true,
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "src/**/*.ts"
+  ],
+  "coverageDirectory": "coverage",
+  "coveragePathIgnorePatterns": [
+    "/node_modules/"
+  ],
+  "coverageReporters": [
+    "text",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  },
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "tsconfig.tests.json"
+    }
+  },
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx"
+  ],
+  "moduleNameMapper": {},
+  "modulePathIgnorePatterns": [],
+  "notify": false,
+  "notifyMode": "always",
+  "preset": null,
+  "projects": null,
+  "reporters": null,
+  "resetMocks": false,
+  "resetModules": false,
+  "resolver": null,
+  "restoreMocks": false,
+  "rootDir": null,
+  "testEnvironment": "node",
+  "testRegex": "\\.test\\.tsx?$",
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  }
+}
