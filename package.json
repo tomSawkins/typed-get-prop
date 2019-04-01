@@ -18,7 +18,7 @@
     "release": "git checkout master && git pull origin master && standard-version && ts-node ./support/updatePackageVersion.ts",
     "ship": "git push --follow-tags origin master && cd ./dist && npm publish",
     "pretest": "npm run build",
-    "test": "jest"
+    "test": "jest --config ./jest.config.json"
   },
   "keywords": [
     "TypeScript",
@@ -36,7 +36,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run check",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS --config ./commitlint.config.json"
     }
   },
   "author": {
