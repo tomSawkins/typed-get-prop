@@ -1,5 +1,11 @@
-# typed-get-prop
-Strongly-typed function to get a nested & potentially null/undefined property value safely from an object.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tomSawkins/typed-get-prop/master/logo.jpg" />
+  <p align="center">
+    Strongly-typed function to get a nested & potentially null/undefined property value.
+  </p>
+</p>
+
+<br />
 
 [![npm version](https://badge.fury.io/js/typed-get-prop.svg)](https://badge.fury.io/js/typed-get-prop)
 [![Build Status](https://travis-ci.org/tomSawkins/typed-get-prop.svg?branch=master)](https://travis-ci.org/tomSawkins/typed-get-prop)
@@ -53,7 +59,7 @@ const trinity = getProp(movie, 'cast', 1, 'characters', 0, 'name'); // string | 
     const leadActor = getProp(movie, 'cast', 0);
     ```
 
-2. Also `typed-get-prop` will complain at design/compile-time if you try to access a property of a typed object that doesn't exist in the model.
+2. Unlike most (if not all?) other property getter libraries on NPM, `typed-get-prop` will complain at design/compile-time if you try to access a property of a typed object that doesn't exist in the model.
 
     ```typescript
     const movie: Movie = {
@@ -73,7 +79,7 @@ const trinity = getProp(movie, 'cast', 1, 'characters', 0, 'name'); // string | 
     const leadActor = getProp(movie, 'actors', 0);
     ```
 
-3. Also, unlike most (if not all?) other similar property getter libraries on NPM, `typed-get-prop` will correctly infer types of properties.
+3. Again, unlike other property getter libraries, `typed-get-prop` will correctly infer types of properties.
 
     ```typescript
     const movie: Movie = {
