@@ -31,7 +31,10 @@
     "nested",
     "property",
     "sub-property",
-    "prop"
+    "safe navigation",
+    "prop",
+    "null propagation",
+    "null propagation operator"
   ],
   "husky": {
     "hooks": {
