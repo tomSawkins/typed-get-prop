@@ -102,7 +102,7 @@ const trinity = getProp(movie, 'cast', 1, 'characters', 0, 'name'); // string | 
 ## Comparison with other npm libraries
 
 | Library        | Typesafe | Supports older browsers | Doesn't mutates Object.prototype | Doesn't swallow exceptions indiscriminately
-| - | - | - | - | -
+| :- | :-: | :-: | :-: | :-:
 | [get-typed-prop](https://www.npmjs.com/package/typed-get-prop) | ✅ | ✅ | ✅ | ✅
 | [nevernull](https://www.npmjs.com/package/nevernull) | ❌ | ❌ | ✅ | ✅
 | [telvis](https://www.npmjs.com/package/telvis) | ✅ | ❌ | ❌ | ✅
