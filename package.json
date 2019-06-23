@@ -1,6 +1,6 @@
 {
   "name": "typed-get-prop",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Strongly-typed function to get a nested & potentially null/undefined property value safely from an object",
   "main": "index.js",
   "types": "index.d.ts",
