@@ -98,6 +98,20 @@ const trinity = getProp(movie, 'cast', 1, 'characters', 0, 'name'); // string | 
     const year = getProp(movie, 'year'); // year is number | undefined at design-time
     ```
 
+
+## Comparison with other npm libraries
+
+| Library        | Typesafe | Supports older browsers | Doesn't mutates Object.prototype | Doesn't swallow exceptions indiscriminately
+| :- | :-: | :-: | :-: | :-:
+| [get-typed-prop](https://www.npmjs.com/package/typed-get-prop) | ✅ | ✅ | ✅ | ✅
+| [nevernull](https://www.npmjs.com/package/nevernull) | ❌ | ❌ | ✅ | ✅
+| [telvis](https://www.npmjs.com/package/telvis) | ✅ | ❌ | ❌ | ✅
+| [ts-optchain](https://www.npmjs.com/package/ts-optchain) | ✅ | ❌ Only via a custom compiler & transform | ✅ | ✅
+| [@smartlyio/safe-navigation](https://www.npmjs.com/package/@smartlyio/safe-navigation) | ✅ | ❌ | ✅ | ✅
+| [safe-ts](https://www.npmjs.com/package/safe-ts) | ✅ | ✅ | ✅ | ❌
+| [lonely-operation](https://www.npmjs.com/package/lonely-operation) | ✅ | ❌ | ✅ | ✅
+
+
 ## Contributing
 Got an issue or a feature request? [Log it](https://github.com/tomSawkins/typed-get-prop/issues).
 
