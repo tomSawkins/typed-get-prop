@@ -63,7 +63,7 @@
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/config-conventional": "^9.1.1",
     "@commitlint/prompt-cli": "^8.1.0",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.3",
